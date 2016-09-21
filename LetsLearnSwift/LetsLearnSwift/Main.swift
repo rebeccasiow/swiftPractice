@@ -57,7 +57,12 @@ func distance(x1: Double, y1: Double, x2: Double, y2: Double) -> Double {
 
 /// Return the factorial of n.
 func factorial(n: Int) -> Int {
-    return 0
+    if(n == 0){
+        return 1
+    }
+    else{
+        return n*factorial(n-1)
+    }
 }
 
 
@@ -66,19 +71,32 @@ func factorial(n: Int) -> Int {
 /// Return the input string with an exclamation point at the end.
 /// Example: "hello" -> "hello!"
 func emphasize(s: String) -> String {
-    return ""
+    return s + "!"
 }
 
 /// Return true if the string is longer than 10 characters, and false if the string is less than 10 characters long.
 func tooLong(s: String) -> Bool {
-    return false
+    if(s.characters.count > 10){
+        return true
+    }
+    else {
+        return false
+    }
 }
 
 /// Return the string saying how many apples and oranges you have. If you have only 1 of either apples or oranges, use the correct plural form of the word.
 /// Example: apples: 3, oranges: 5 -> "I have 3 apples and 5 oranges."
 /// Example: apples: 1, oranges: 0 -> "I have 1 apple and 0 oranges."
 func applesAndOranges(apples: Int, oranges: Int) -> String {
-    return ""
+    var oString = "oranges"
+    var aString = "apples"
+    if apples == 1 {
+        aString = "apple"
+    }
+    if oranges == 1 {
+        oString = "orange"
+    }
+    return "I have \(apples) \(aString) and \(oranges) \(oString)."
 }
 
 /// Return the input string repeated the given number of times.
