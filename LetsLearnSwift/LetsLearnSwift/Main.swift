@@ -102,7 +102,11 @@ func applesAndOranges(apples: Int, oranges: Int) -> String {
 /// Return the input string repeated the given number of times.
 /// Example: "abc" repeated 3 times should return "abcabcabc"
 func duplicate(string: String, times: Int) -> String {
-    return ""
+    var repeatString = ""
+    for _ in 0..<times {
+        repeatString += string
+    }
+    return repeatString
 }
 
 /// Return a string with all of the vowels (a,e,i,o,u) removed. Assume all input strings are lowercase.
