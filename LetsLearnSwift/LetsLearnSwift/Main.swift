@@ -40,8 +40,10 @@ func average(a: Int, b: Int, c: Int) -> Double {
 }
 
 /// Return the area of a circle with the given radius. (Hint: Use M_PI for the value of pi)
+/// Area = pi*(r^2)
 func circleArea(radius: Double) -> Double {
-    return 0
+    let area = M_PI*pow(radius, 2)
+    return area
 }
 
 /// Return the distance between two points on the 2D coordinate plane.
