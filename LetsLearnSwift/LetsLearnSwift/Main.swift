@@ -112,7 +112,16 @@ func duplicate(string: String, times: Int) -> String {
 /// Return a string with all of the vowels (a,e,i,o,u) removed. Assume all input strings are lowercase.
 /// Example: "hello world" -> "hll wrld"
 func removeVowels(s: String) -> String {
-    return ""
+    //let vowels:[String] = ["a","e","i","o","u"]
+    let newString = s.stringByReplacingOccurrencesOfString("[aeiou]", withString: "", options: [.RegularExpressionSearch], range: nil)
+        
+        //String(s.characters.filter(vowels))
+    //what does $0 mean????
+    
+        //s.stringByReplacingOccurrencesOfString("aeiou", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+    //s.stringByReplacingOccurrencesOfString(s, withString: newString, options: "aeiou", range: s.characters.count)
+    
+    return newString
 }
 
 
