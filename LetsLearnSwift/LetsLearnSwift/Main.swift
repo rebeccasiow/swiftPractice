@@ -48,8 +48,11 @@ func circleArea(radius: Double) -> Double {
 
 /// Return the distance between two points on the 2D coordinate plane.
 /// The first point is (x1, y1) and the second is (x2, y2).
+/// Pythagoras: root(abs(y1-y2)^2 + abs(x1-x2)^2)
 func distance(x1: Double, y1: Double, x2: Double, y2: Double) -> Double {
-    return 0
+    var dist = pow(abs(x1 - x2),2)+pow(abs(y1 - y2),2)
+    dist = pow(dist, 0.5)
+    return dist
 }
 
 /// Return the factorial of n.
